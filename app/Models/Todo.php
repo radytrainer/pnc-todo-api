@@ -9,8 +9,15 @@ class Todo extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+    
+    protected $fillable = [
+        'title',
+        'description',
+        'important'
+    ];
+
     protected $hidden = [
-        'id',
         'created_at',
         'updated_at',
     ];
@@ -18,4 +25,6 @@ class Todo extends Model
     protected $casts = [
         'important' => 'boolean',
     ];
+
+    
 }

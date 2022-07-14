@@ -29,7 +29,6 @@ class TodoController extends Controller
         $todo->description = $request->description;
         $todo->important = $request->important;
         $todo->save();
-
         return response()->json(['message' => "Created Todo Successfully"], 201);
     }
 
